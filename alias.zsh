@@ -17,3 +17,6 @@ alias srv='python -m SimpleHTTPServer 8008'
 
 alias d="cd ~/Downloads; l"
 alias p="cd ~/projects; l"
+
+alias nr="npm run $@"
+alias npi="npm prune && npm install"
