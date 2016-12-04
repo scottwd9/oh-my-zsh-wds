@@ -21,6 +21,3 @@ export M2_HOME=~/opt/maven
 export M2=$M2_HOME/bin
 export MAVEN_OPTS=-Xmx1G
 export PATH=$M2:$PATH
-
-export NVM_DIR="/Users/wds/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
