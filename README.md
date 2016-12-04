@@ -1,0 +1,3 @@
+- Clone
+- Link to `~/.oh-my-zsh-wds`
+- In `~/.zshrc`, set `ZSH_CUSTOM=~/.oh-my-zsh-wds`
