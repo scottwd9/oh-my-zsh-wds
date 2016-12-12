@@ -1,3 +1,4 @@
+export EDITOR="emacs -nw -q"
 export GREP_EXCLUDES="{dist,node_modules}/*"
 
 alias ..='cd .. ;l'
