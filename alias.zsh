@@ -13,11 +13,16 @@ alias gr="grep --color=auto -R --exclude=$GREP_EXCLUDES"
 alias ls='ls -G'
 alias l='ls -loFh'
 alias la='ls -laF'
-alias psa="ps aux | grep -v grep | grep "
+alias psa="ps aux | grep -v grep | grep -i "
 alias srv='python -m SimpleHTTPServer 8008'
 
 alias d="cd ~/Downloads; l"
 alias p="cd ~/projects; l"
+alias s="atom ~/Dropbox/scratch"
 
 alias nr="npm run $@"
 alias npi="npm prune && npm install"
+
+alias zshconfig="atom ~/.zshrc"
+alias ohmyzsh="atom ~/.oh-my-zsh"
+alias ohmyzshcustom="atom ~/.oh-my-zsh-custom"
