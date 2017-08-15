@@ -1,5 +1,8 @@
 export EDITOR="emacs -nw -q"
 export GREP_EXCLUDES="{dist,node_modules}/*"
+export EDITOR_OF_THE_WEEK="code"
+
+export GRAILS_OPTS="-Xmx2g"
 
 alias ..='cd .. ;l'
 alias ...='cd ../.. ;l'
@@ -18,11 +21,13 @@ alias srv='python -m SimpleHTTPServer 8008'
 
 alias d="cd ~/Downloads; l"
 alias p="cd ~/projects; l"
-alias s="atom ~/Dropbox/scratch"
+alias s="$EDITOR_OF_THE_WEEK ~/Dropbox/notes"
 
 alias nr="npm run $@"
-alias npi="npm prune && npm install"
+alias nn="npm prune && npm install"
+alias yr="yarn run $@"
+alias yy="yarn install --force"
 
-alias zshconfig="atom ~/.zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
-alias ohmyzshcustom="atom ~/.oh-my-zsh-custom"
+alias zshconfig="$EDITOR_OF_THE_WEEK ~/.zshrc"
+alias ohmyzsh="$EDITOR_OF_THE_WEEK ~/.oh-my-zsh"
+alias ohmyzshcustom="$EDITOR_OF_THE_WEEK ~/.oh-my-zsh-custom"
