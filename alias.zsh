@@ -1,4 +1,12 @@
-export EDITOR="emacs -nw -q"
+export ENABLE_DOCKER_PROMPT=false
+export DISABLE_NODE_PROMPT=true
+export DISABLE_CONDA_PROMPT=true
+
+alias a2="cd ~/projects/analytics2; l"
+alias mc="cd ~/projects/miss_cleo; source activate miss_cleo; l"
+
+export EDITOR="emacs -nw -Q"
+alias em="emacs -nw -Q"
 export GREP_EXCLUDES="{dist,node_modules}/*"
 export EDITOR_OF_THE_WEEK="code"
 
@@ -16,8 +24,8 @@ alias gr="grep --color=auto -R --exclude=$GREP_EXCLUDES"
 alias ls='ls -G'
 alias l='ls -loFh'
 alias la='ls -laF'
-alias psa="ps aux | grep -v grep | grep -i "
-alias srv='python -m SimpleHTTPServer 8008'
+alias psa="ps aux"
+alias psg="ps A | grep -v grep | grep -i "
 
 alias d="cd ~/Downloads; l"
 alias p="cd ~/projects; l"
@@ -25,9 +33,12 @@ alias s="$EDITOR_OF_THE_WEEK ~/Dropbox/notes"
 
 alias nr="npm run $@"
 alias nn="npm prune && npm install"
-alias yr="yarn run $@"
-alias yy="yarn install --force"
 
 alias zshconfig="$EDITOR_OF_THE_WEEK ~/.zshrc"
 alias ohmyzsh="$EDITOR_OF_THE_WEEK ~/.oh-my-zsh"
 alias ohmyzshcustom="$EDITOR_OF_THE_WEEK ~/.oh-my-zsh-custom"
+
+alias dps="docker ps"
+type dstopall &>/dev/null || dstopall() {
+  docker stop $(docker ps -q -a)
+}
