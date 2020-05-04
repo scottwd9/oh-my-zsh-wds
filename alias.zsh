@@ -29,7 +29,7 @@ alias psg="ps A | grep -v grep | grep -i "
 
 alias d="cd ~/Downloads; l"
 alias p="cd ~/projects; l"
-alias s="$EDITOR_OF_THE_WEEK ~/Dropbox/notes"
+alias s="$EDITOR_OF_THE_WEEK ~/work"
 
 alias nr="npm run $@"
 alias nn="npm prune && npm install"
@@ -38,7 +38,16 @@ alias zshconfig="$EDITOR_OF_THE_WEEK ~/.zshrc"
 alias ohmyzsh="$EDITOR_OF_THE_WEEK ~/.oh-my-zsh"
 alias ohmyzshcustom="$EDITOR_OF_THE_WEEK ~/.oh-my-zsh-custom"
 
+alias gwnc='gw --no-build-cache'
 alias dps="docker ps"
 type dstopall &>/dev/null || dstopall() {
   docker stop $(docker ps -q -a)
 }
+
+
+alias ldc='docker-compose -f local-dev-compose.yml'
+alias ldc-refresh='ldc pull && ldc build'
+alias ldc-up='ldc up -d'
+alias ldc-stop='ldc stop'
+alias ldc-logs='ldc logs -f --tail="10"'
+alias ldc-infra='ldc-up db zookeeper kafka schema-registry'
