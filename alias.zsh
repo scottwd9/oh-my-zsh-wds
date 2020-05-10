@@ -5,8 +5,7 @@ export DISABLE_CONDA_PROMPT=true
 alias a2="cd ~/projects/analytics2; l"
 alias mc="cd ~/projects/miss_cleo; source activate miss_cleo; l"
 
-export EDITOR="emacs -nw -Q"
-alias em="emacs -nw -Q"
+export EDITOR="code --wait"
 export GREP_EXCLUDES="{dist,node_modules}/*"
 export EDITOR_OF_THE_WEEK="code"
 
@@ -16,7 +15,7 @@ alias ..='cd .. ;l'
 alias ...='cd ../.. ;l'
 alias ....='cd ../../.. ;l'
 alias .....='cd ../../../.. ;l'
-alias du='du -hd1'
+alias du='du -hd1 | sort -hr'
 alias fn='find . -name'
 alias g="git"
 alias grep="grep --color=auto"
@@ -28,6 +27,7 @@ alias psa="ps aux"
 alias psg="ps A | grep -v grep | grep -i "
 
 alias d="cd ~/Downloads; l"
+alias e="$EDITOR_OF_THE_WEEK $@"
 alias p="cd ~/projects; l"
 alias s="$EDITOR_OF_THE_WEEK ~/work"
 
