@@ -5,7 +5,8 @@ export DISABLE_CONDA_PROMPT=true
 alias a2="cd ~/projects/analytics2; l"
 alias mc="cd ~/projects/miss_cleo; source activate miss_cleo; l"
 
-export EDITOR="code --wait"
+export EDITOR="code"
+alias em="emacs -nw -Q"
 export GREP_EXCLUDES="{dist,node_modules}/*"
 export EDITOR_OF_THE_WEEK="code"
 
@@ -29,6 +30,7 @@ alias psg="ps A | grep -v grep | grep -i "
 alias d="cd ~/Downloads; l"
 alias e="$EDITOR_OF_THE_WEEK $@"
 alias p="cd ~/projects; l"
+alias e="$EDITOR_OF_THE_WEEK $@"
 alias s="$EDITOR_OF_THE_WEEK ~/work"
 
 alias nr="npm run $@"
@@ -42,6 +44,10 @@ alias gwnc='gw --no-build-cache'
 alias dps="docker ps"
 type dstopall &>/dev/null || dstopall() {
   docker stop $(docker ps -q -a)
+}
+
+type nosleep &>/dev/null || nosleep() {
+  caffeinate -is -t `expr 60 \* 60 \* $1`
 }
 
 
