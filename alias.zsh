@@ -29,7 +29,6 @@ alias psg="ps A | grep -v grep | grep -i "
 alias d="cd ~/Downloads; l"
 alias e="$EDITOR_OF_THE_WEEK $@"
 alias p="cd ~/projects; l"
-alias e="$EDITOR_OF_THE_WEEK $@"
 alias s="$EDITOR_OF_THE_WEEK ~/work"
 
 alias nr="npm run $@"
