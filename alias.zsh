@@ -5,8 +5,7 @@ export DISABLE_CONDA_PROMPT=true
 alias a2="cd ~/projects/analytics2; l"
 alias mc="cd ~/projects/miss_cleo; source activate miss_cleo; l"
 
-export EDITOR="code"
-alias em="emacs -nw -Q"
+export EDITOR="code --wait"
 export GREP_EXCLUDES="{dist,node_modules}/*"
 export EDITOR_OF_THE_WEEK="code"
 
