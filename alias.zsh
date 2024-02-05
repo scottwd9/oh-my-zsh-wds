@@ -46,11 +46,3 @@ type dstopall &>/dev/null || dstopall() {
 type nosleep &>/dev/null || nosleep() {
   caffeinate -is -t `expr 60 \* 60 \* $1`
 }
-
-
-alias ldc='docker-compose -f local-dev-compose.yml'
-alias ldc-refresh='ldc pull && ldc build'
-alias ldc-up='ldc up -d'
-alias ldc-stop='ldc stop'
-alias ldc-logs='ldc logs -f --tail="10"'
-alias ldc-infra='ldc-up db zookeeper kafka schema-registry'
